@@ -121,6 +121,7 @@
     <None Include="Resources\icons8-calendario-64.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Completed task _Flatline.png" />
     <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.css" />
     <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.js" />
     <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_contrast_black.css" />
