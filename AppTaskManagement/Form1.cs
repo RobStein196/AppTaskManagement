@@ -87,24 +87,30 @@ namespace AppTaskManagement
         //Abrir formularios
         public void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
-            Form formulario;
-            formulario = panelForms.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                     //si el formulario/instancia no existe
-            if (formulario == null)
+            try
             {
-                formulario = new MiForm();
-                formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
-                panelForms.Controls.Add(formulario);
-                panelForms.Tag = formulario;
-                formulario.Show();
-                formulario.BringToFront();
-            }
-            //si el formulario/instancia existe
-            else
+                MiForm formulario;
+                formulario = panelForms.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+                                                                                   //si el formulario/instancia no existe
+                if (formulario == null)
+                {
+                    formulario = new MiForm();
+                    formulario.TopLevel = false;
+                    formulario.FormBorderStyle = FormBorderStyle.None;
+                    formulario.Dock = DockStyle.Fill;
+                    panelForms.Controls.Add(formulario);
+                    panelForms.Tag = formulario;
+                    formulario.Show();
+                    formulario.BringToFront();
+                }
+                //si el formulario/instancia existe
+                else
+                {
+                    formulario.BringToFront();
+                }
+            }catch(Exception ex) 
             {
-                formulario.BringToFront();
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

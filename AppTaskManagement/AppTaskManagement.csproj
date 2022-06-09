@@ -37,6 +37,7 @@
       <HintPath>..\packages\DHTMLX.Scheduler.NET.4.0.3\lib\DHTMLX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APPTASKDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APPTASKDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Calendario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="APPTASKDataSet.xsc">
+      <DependentUpon>APPTASKDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="APPTASKDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>APPTASKDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APPTASKDataSet.xss">
+      <DependentUpon>APPTASKDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

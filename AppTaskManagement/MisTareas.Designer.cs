@@ -29,17 +29,28 @@ namespace AppTaskManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbDate = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NumTarea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Label = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Completed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tAREASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aPPTASKDataSet = new AppTaskManagement.APPTASKDataSet();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tAREASTableAdapter = new AppTaskManagement.APPTASKDataSetTableAdapters.TAREASTableAdapter();
+            this.datePick = new System.Windows.Forms.DateTimePicker();
+            this.iDTAREADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tITULODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eTIQUETADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRIPCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSTADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fECHAINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fECHAFINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uLTIMAMODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMPORTANCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAREASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aPPTASKDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,74 +67,42 @@ namespace AppTaskManagement
             this.label1.Text = "Tareas pendientes";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // cmbDate
-            // 
-            this.cmbDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.cmbDate.FormattingEnabled = true;
-            this.cmbDate.Location = new System.Drawing.Point(573, 42);
-            this.cmbDate.Name = "cmbDate";
-            this.cmbDate.Size = new System.Drawing.Size(193, 24);
-            this.cmbDate.TabIndex = 2;
-            this.cmbDate.Text = "Fechas de entrega";
-            this.cmbDate.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NumTarea,
-            this.Titulo,
-            this.DueDate,
-            this.Label,
-            this.Completed});
+            this.iDTAREADataGridViewTextBoxColumn,
+            this.tITULODataGridViewTextBoxColumn,
+            this.eTIQUETADataGridViewTextBoxColumn,
+            this.dESCRIPCIONDataGridViewTextBoxColumn,
+            this.eSTADODataGridViewTextBoxColumn,
+            this.fECHAINDataGridViewTextBoxColumn,
+            this.fECHAFINDataGridViewTextBoxColumn,
+            this.uLTIMAMODDataGridViewTextBoxColumn,
+            this.iMPORTANCIADataGridViewTextBoxColumn,
+            this.iDUSUARIODataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tAREASBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(12, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(919, 213);
+            this.dataGridView1.Size = new System.Drawing.Size(1043, 427);
             this.dataGridView1.TabIndex = 3;
             // 
-            // NumTarea
+            // tAREASBindingSource
             // 
-            this.NumTarea.HeaderText = "Tarea";
-            this.NumTarea.MinimumWidth = 6;
-            this.NumTarea.Name = "NumTarea";
-            this.NumTarea.ReadOnly = true;
-            this.NumTarea.Width = 125;
+            this.tAREASBindingSource.DataMember = "TAREAS";
+            this.tAREASBindingSource.DataSource = this.aPPTASKDataSet;
             // 
-            // Titulo
+            // aPPTASKDataSet
             // 
-            this.Titulo.HeaderText = "Titulo";
-            this.Titulo.MinimumWidth = 6;
-            this.Titulo.Name = "Titulo";
-            this.Titulo.ReadOnly = true;
-            this.Titulo.Width = 125;
-            // 
-            // DueDate
-            // 
-            this.DueDate.HeaderText = "Finalizacion";
-            this.DueDate.MinimumWidth = 6;
-            this.DueDate.Name = "DueDate";
-            this.DueDate.ReadOnly = true;
-            this.DueDate.Width = 125;
-            // 
-            // Label
-            // 
-            this.Label.HeaderText = "Etiqueta";
-            this.Label.MinimumWidth = 6;
-            this.Label.Name = "Label";
-            this.Label.ReadOnly = true;
-            this.Label.Width = 125;
-            // 
-            // Completed
-            // 
-            this.Completed.HeaderText = "Marcar como completada";
-            this.Completed.MinimumWidth = 6;
-            this.Completed.Name = "Completed";
-            this.Completed.Width = 125;
+            this.aPPTASKDataSet.DataSetName = "APPTASKDataSet";
+            this.aPPTASKDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox2
             // 
@@ -146,15 +125,108 @@ namespace AppTaskManagement
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // tAREASTableAdapter
+            // 
+            this.tAREASTableAdapter.ClearBeforeFill = true;
+            // 
+            // datePick
+            // 
+            this.datePick.CustomFormat = "dd/MM/yyyy";
+            this.datePick.Location = new System.Drawing.Point(565, 44);
+            this.datePick.Name = "datePick";
+            this.datePick.Size = new System.Drawing.Size(228, 22);
+            this.datePick.TabIndex = 5;
+            this.datePick.ValueChanged += new System.EventHandler(this.datePick_ValueChanged);
+            // 
+            // iDTAREADataGridViewTextBoxColumn
+            // 
+            this.iDTAREADataGridViewTextBoxColumn.DataPropertyName = "ID_TAREA";
+            this.iDTAREADataGridViewTextBoxColumn.HeaderText = "ID_TAREA";
+            this.iDTAREADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDTAREADataGridViewTextBoxColumn.Name = "iDTAREADataGridViewTextBoxColumn";
+            this.iDTAREADataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tITULODataGridViewTextBoxColumn
+            // 
+            this.tITULODataGridViewTextBoxColumn.DataPropertyName = "TITULO";
+            this.tITULODataGridViewTextBoxColumn.HeaderText = "TITULO";
+            this.tITULODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tITULODataGridViewTextBoxColumn.Name = "tITULODataGridViewTextBoxColumn";
+            this.tITULODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // eTIQUETADataGridViewTextBoxColumn
+            // 
+            this.eTIQUETADataGridViewTextBoxColumn.DataPropertyName = "ETIQUETA";
+            this.eTIQUETADataGridViewTextBoxColumn.HeaderText = "ETIQUETA";
+            this.eTIQUETADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eTIQUETADataGridViewTextBoxColumn.Name = "eTIQUETADataGridViewTextBoxColumn";
+            this.eTIQUETADataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dESCRIPCIONDataGridViewTextBoxColumn
+            // 
+            this.dESCRIPCIONDataGridViewTextBoxColumn.DataPropertyName = "DESCRIPCION";
+            this.dESCRIPCIONDataGridViewTextBoxColumn.HeaderText = "DESCRIPCION";
+            this.dESCRIPCIONDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dESCRIPCIONDataGridViewTextBoxColumn.Name = "dESCRIPCIONDataGridViewTextBoxColumn";
+            this.dESCRIPCIONDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // eSTADODataGridViewTextBoxColumn
+            // 
+            this.eSTADODataGridViewTextBoxColumn.DataPropertyName = "ESTADO";
+            this.eSTADODataGridViewTextBoxColumn.HeaderText = "ESTADO";
+            this.eSTADODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eSTADODataGridViewTextBoxColumn.Name = "eSTADODataGridViewTextBoxColumn";
+            this.eSTADODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fECHAINDataGridViewTextBoxColumn
+            // 
+            this.fECHAINDataGridViewTextBoxColumn.DataPropertyName = "FECHAIN";
+            this.fECHAINDataGridViewTextBoxColumn.HeaderText = "FECHAIN";
+            this.fECHAINDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fECHAINDataGridViewTextBoxColumn.Name = "fECHAINDataGridViewTextBoxColumn";
+            this.fECHAINDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fECHAFINDataGridViewTextBoxColumn
+            // 
+            this.fECHAFINDataGridViewTextBoxColumn.DataPropertyName = "FECHAFIN";
+            this.fECHAFINDataGridViewTextBoxColumn.HeaderText = "FECHAFIN";
+            this.fECHAFINDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fECHAFINDataGridViewTextBoxColumn.Name = "fECHAFINDataGridViewTextBoxColumn";
+            this.fECHAFINDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // uLTIMAMODDataGridViewTextBoxColumn
+            // 
+            this.uLTIMAMODDataGridViewTextBoxColumn.DataPropertyName = "ULTIMAMOD";
+            this.uLTIMAMODDataGridViewTextBoxColumn.HeaderText = "ULTIMAMOD";
+            this.uLTIMAMODDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.uLTIMAMODDataGridViewTextBoxColumn.Name = "uLTIMAMODDataGridViewTextBoxColumn";
+            this.uLTIMAMODDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iMPORTANCIADataGridViewTextBoxColumn
+            // 
+            this.iMPORTANCIADataGridViewTextBoxColumn.DataPropertyName = "IMPORTANCIA";
+            this.iMPORTANCIADataGridViewTextBoxColumn.HeaderText = "IMPORTANCIA";
+            this.iMPORTANCIADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iMPORTANCIADataGridViewTextBoxColumn.Name = "iMPORTANCIADataGridViewTextBoxColumn";
+            this.iMPORTANCIADataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iDUSUARIODataGridViewTextBoxColumn
+            // 
+            this.iDUSUARIODataGridViewTextBoxColumn.DataPropertyName = "ID_USUARIO";
+            this.iDUSUARIODataGridViewTextBoxColumn.HeaderText = "ID_USUARIO";
+            this.iDUSUARIODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDUSUARIODataGridViewTextBoxColumn.Name = "iDUSUARIODataGridViewTextBoxColumn";
+            this.iDUSUARIODataGridViewTextBoxColumn.Width = 125;
+            // 
             // MisTareas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.datePick);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cmbDate);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -162,6 +234,8 @@ namespace AppTaskManagement
             this.Text = "MisTareas";
             this.Load += new System.EventHandler(this.MisTareas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tAREASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aPPTASKDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -173,13 +247,21 @@ namespace AppTaskManagement
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbDate;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumTarea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Label;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Completed;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private APPTASKDataSet aPPTASKDataSet;
+        private System.Windows.Forms.BindingSource tAREASBindingSource;
+        private APPTASKDataSetTableAdapters.TAREASTableAdapter tAREASTableAdapter;
+        private System.Windows.Forms.DateTimePicker datePick;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDTAREADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tITULODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eTIQUETADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dESCRIPCIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eSTADODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fECHAINDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fECHAFINDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uLTIMAMODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMPORTANCIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDUSUARIODataGridViewTextBoxColumn;
     }
 }
