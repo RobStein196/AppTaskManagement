@@ -20,7 +20,13 @@ namespace AppTaskManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+            Conexion.Conectar();
+            }
+            catch{
+            MessageBox.Show("Conexion a la BD Fallida");
+            }
         }
 
         #region Creacion de ventana
