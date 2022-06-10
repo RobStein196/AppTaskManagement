@@ -1,0 +1,14 @@
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\bin\Debug\AppTask M.exe.config
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\bin\Debug\AppTask M.exe
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\bin\Debug\AppTask M.pdb
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask M.csproj.AssemblyReference.cache
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask M.csproj.SuggestedBindingRedirects.cache
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask_M.Calendario.resources
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask_M.Form1.resources
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask_M.MisTareas.resources
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask_M.Properties.Resources.resources
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask M.csproj.GenerateResource.cache
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask M.csproj.CoreCompileInputs.cache
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask M.exe
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask M.pdb
+C:\Users\jazzi\Documents\Instituto Tecnologico Ciclo 2022-2 5to\Ingenieria de Software\AppTask M\obj\Debug\AppTask_M.CrearTarea.resources
