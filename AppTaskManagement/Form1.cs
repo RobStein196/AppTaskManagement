@@ -91,7 +91,7 @@ namespace AppTaskManagement
         #endregion
 
         //Abrir formularios
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        public void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
             formulario = panelForms.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
